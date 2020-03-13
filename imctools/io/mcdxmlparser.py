@@ -355,12 +355,12 @@ class McdXmlParser(Meta):
         raise NotImplementedError
 		
 	def get_panorama_ids(self):
-		panoramas = self.objects[PANORAMA]
-		result = []
-		for key in list(panoramas):
-			panorama = panoramas[key]
-			result.append(panorama.id)
-		return result
+        panoramas = self.objects[PANORAMA] 
+        result = []
+        for key in list(panoramas):
+            panorama = panoramas[key]
+            result.append(panorama.id)
+        return result
 
     def get_roipoints(self):
         """
