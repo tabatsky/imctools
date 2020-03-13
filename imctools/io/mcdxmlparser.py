@@ -346,13 +346,13 @@ class McdXmlParser(Meta):
         """
         gets a list of all acuisitionROIs
         """
-        raise NotImplementedError
+        return self.objects[ACQUISITIONROI]
 
     def get_panoramas(self):
         """
         get a list of all panoramas
         """
-        raise NotImplementedError
+        return self.objects[PANORAMA]
 
     def get_roipoints(self):
         """
