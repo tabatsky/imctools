@@ -354,7 +354,7 @@ class McdXmlParser(Meta):
         """
         raise NotImplementedError
 		
-	def get_panorama_ids(self):
+    def get_panorama_ids(self):
         panoramas = self.objects[PANORAMA] 
         result = []
         for key in list(panoramas):
