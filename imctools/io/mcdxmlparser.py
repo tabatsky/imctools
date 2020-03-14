@@ -346,13 +346,21 @@ class McdXmlParser(Meta):
         """
         gets a list of all acuisitionROIs
         """
-        raise NotImplementedError
+        acquisition_rois = self.objects[ACQUISITIONROI]
+        result = []
+        for key in list(acquisition_rois):
+            result.append(acquisition_rois[key])
+        return result
 
     def get_panoramas(self):
         """
         get a list of all panoramas
         """
-        raise NotImplementedError
+        panoramas = self.objects[PANORAMA]
+        result = []
+        for key in list(panoramas):
+            result.append(panoramas[key])
+        return result
 		
     def get_panorama_ids(self):
         panoramas = self.objects[PANORAMA] 
@@ -366,5 +374,9 @@ class McdXmlParser(Meta):
         """
         get a list of all roipoints
         """
-        raise NotImplementedError
+        roipoints = self.objects[ROIPOINT] 
+        result = []
+        for key in list(roipoints):
+            result.append(roipoints[key])
+        return result
 
