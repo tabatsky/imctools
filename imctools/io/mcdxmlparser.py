@@ -369,6 +369,14 @@ class McdXmlParser(Meta):
             panorama = panoramas[key]
             result.append(panorama.id)
         return result
+		
+    def get_slide_ids(self):
+        slides = self.objects[SLIDE]
+        result = []
+        for key in list(slides):
+            slide = slides[key]
+            result.append(slide.id)
+        return result
 
     def get_roipoints(self):
         """
